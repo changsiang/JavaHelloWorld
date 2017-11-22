@@ -13,6 +13,7 @@ public class HelloWorld {
 		//Print the car plate number using the function provided in Car class
 		one.ShowCarPlateNumber();
 		two.ShowCarPlateNumber();
+		one.ShowCarPlateNumber();
 	}
 
 }
