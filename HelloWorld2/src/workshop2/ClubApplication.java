@@ -2,6 +2,7 @@
  * 
  */
 package workshop2;
+import workshop3.*;
 
 /**
  * @author ChangSiang In the ClubApplication class's main() method, instantiate
@@ -17,6 +18,8 @@ public class ClubApplication {
 		Facility club3 = new Facility("Club3", "This is club number three");
 		Person person1 = new Person("Tan", "Ah", "Beng");
 		Person person2 = new Person("Stan", "Laurel", null);
+		
+		
 
 		club1.show();
 		club2.show();

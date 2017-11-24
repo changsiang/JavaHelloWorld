@@ -55,11 +55,19 @@ public class Facility {
 
 	public void show() {
 		if(this.description != null) {
-			System.out.println(MessageFormat.format("{0} ({1})", this.name, this.description));
+			System.out.println(this.toString());
 		}else {
 			System.out.println(this.name);
 		}
 		
+	}
+	
+	//For consistency, provide toString() method in the facility class
+	
+	@Override
+	public String toString() {
+		
+		return MessageFormat.format("{0} ({1})", this.name, this.description);
 	}
 
 }

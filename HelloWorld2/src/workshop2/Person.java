@@ -1,5 +1,7 @@
 package workshop2;
 
+import java.text.MessageFormat;
+
 /**
  * @author ChangSiiang This is a person class. This will be the base on which to
  *         build the club members class. Give the Person class three attributes:
@@ -34,7 +36,6 @@ public class Person {
 	 * constructor and click "OK"
 	 */
 	public Person(String surName, String firstName, String secondName) {
-		super();
 		this.surName = surName;
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -69,7 +70,15 @@ public class Person {
 		if (this.secondName == null) {
 			System.out.println(this.surName + " " + this.firstName);
 		} else {
-			System.out.println(this.surName + " " + this.firstName + " " + this.secondName);
+			System.out.println(this.toString());
 		}
+	}
+
+	/* Override the toString() so that it will return the full name of the person */
+
+	@Override
+	public String toString() {
+		
+		return MessageFormat.format("{0} {1} {2}", surName, firstName, secondName);
 	}
 }
