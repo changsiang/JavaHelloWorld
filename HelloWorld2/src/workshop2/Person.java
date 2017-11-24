@@ -67,18 +67,19 @@ public class Person {
 	 */
 
 	public void show() {
-		if (this.secondName == null) {
-			System.out.println(this.surName + " " + this.firstName);
-		} else {
-			System.out.println(this.toString());
-		}
+
+		System.out.println(this.toString());
 	}
 
 	/* Override the toString() so that it will return the full name of the person */
 
 	@Override
 	public String toString() {
-		
-		return MessageFormat.format("{0} {1} {2}", surName, firstName, secondName);
+		if (this.secondName == null) {
+			return MessageFormat.format("{0} {1}", surName, firstName);
+		} else {
+			return MessageFormat.format("{0} {1} {2}", surName, firstName, secondName);
+		}
 	}
+
 }

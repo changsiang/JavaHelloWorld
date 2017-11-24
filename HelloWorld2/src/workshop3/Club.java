@@ -8,17 +8,13 @@ public class Club {
 	static int memberNumber;
 	HashMap<Integer, Member> members = new HashMap<Integer, Member>();
 
-	public Club(HashMap<Integer, Member> members) {
-		super();
-		this.members = members;
-	}
 
-	public int addMember(String surName, String firstName, String secondName) {
+	public Member addMember(String surName, String firstName, String secondName) {
 		memberNumber++;
 		Member member = new Member(surName, firstName, secondName, memberNumber);
 		members.put(memberNumber, member);
 
-		return memberNumber;
+		return member;
 
 	}
 
@@ -41,7 +37,7 @@ public class Club {
 	public void showMembers() {
 
 		Collection<Member> memberCollection = members.values();
-		System.out.println("Member Number\t :\t Name");
+		System.out.println("ID\t :\t Name");
 		System.out.println("------------------------");
 		for (Member member : memberCollection) {
 			member.show();

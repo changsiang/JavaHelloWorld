@@ -18,15 +18,18 @@ public class ClubApplication {
 		Facility club3 = new Facility("Club3", "This is club number three");
 		Person person1 = new Person("Tan", "Ah", "Beng");
 		Person person2 = new Person("Stan", "Laurel", null);
-		
-		
-
-		club1.show();
-		club2.show();
-		club3.show();
-		person1.show();
-		person2.show();
-
+		Club aClub = new Club();
+		aClub.addMember("Tan", "Ah", "Kow");
+		aClub.addMember("Tan", "Ah", "Lian");
+		aClub.addMember("Esther", "Tan", null);
+		aClub.addMember("Venkat", "Ramachandran", null);
+		aClub.showMembers();
+		aClub.removeMember(2);
+		System.out.println("[---Remove Member Key \"2\"---]");
+		aClub.showMembers();
+		aClub.removeMember(4);
+		System.out.println("[---Remove Member Key \"4\"---]");
+		aClub.showMembers();
 	}
 
 }

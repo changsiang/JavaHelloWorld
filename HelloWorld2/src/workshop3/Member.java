@@ -16,11 +16,11 @@ public class Member extends Person {
 
 	@Override
 	public String toString() {
-		return MessageFormat.format("{0} : {1}", super.toString(), this.memberNumber);
+		return MessageFormat.format("{1}\t :\t {0}", super.toString(), this.memberNumber);
 	}
 	
 	public void show() {
-		System.out.println(MessageFormat.format("{1}\t :\t {0}", this.toString(), this.memberNumber));
+		System.out.println (this.toString());
 	}
 
 }
