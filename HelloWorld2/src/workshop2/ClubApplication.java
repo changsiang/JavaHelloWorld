@@ -2,7 +2,7 @@
  * 
  */
 package workshop2;
-import workshop3.*;
+import workshop4.*;
 
 /**
  * @author ChangSiang In the ClubApplication class's main() method, instantiate
