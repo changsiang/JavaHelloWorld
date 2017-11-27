@@ -13,11 +13,13 @@ public class Booking {
 	private Date startDate;
 	private Date endDate;
 
-	public Booking(Member member, Facility facility, Date startDate, Date endDate) {
+	public Booking(Member member, Facility facility, Date startDate, Date endDate) throws BadBookingException {
 		this.member = member;
 		this.facility = facility;
 		this.startDate = startDate;
 		this.endDate = endDate;
+		if (this.member == null || this.facility == null || this.startDate == null || this.endDate == null)
+			throw new BadBookingException();
 
 	}
 
@@ -79,11 +81,9 @@ public class Booking {
 				this.facility, this.startDate, this.endDate);
 
 	}
-	
+
 	public void show() {
 		System.out.println(this.toString());
 	}
-	
-	
 
 }
